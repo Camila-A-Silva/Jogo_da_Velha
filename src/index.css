@@ -1,0 +1,21 @@
+/* Reset simples e aplicação de box-sizing global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Garante que o container principal (#root) ocupe 100% da altura da tela e centralize tudo */
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;     /* Centraliza na vertical */
+  justify-content: center;  /* Centraliza na horizontal */
+  padding: 16px;
+}

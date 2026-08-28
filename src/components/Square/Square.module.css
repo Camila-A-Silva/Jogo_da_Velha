@@ -1,0 +1,43 @@
+.square {
+  /* Tamanho fixo e inalterável */
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  /* Centralização perfeita sem deslocamento */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Tipografia cravada */
+  font-size: 2rem;
+  line-height: 1; /* IMPEDIMENTO: Trava a altura de linha da fonte '2rem' */
+  font-weight: 700;
+  color: #1e293b;
+
+  /* Visual da célula */
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.square:hover {
+  background-color: #f1f5f9;
+}
+
+.square:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Modificador BEM: Quando o quadrado é campeão */
+.square--winning {
+  background-color: #22c55eaf !important;
+  color: #ffffff !important;
+  border-color: #15803d !important;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);
+}

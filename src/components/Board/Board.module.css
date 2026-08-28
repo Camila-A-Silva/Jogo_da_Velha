@@ -1,0 +1,20 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.board__status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+/* ESTA CLASSE É A CHAVE: coloca os 3 botões na horizontal */
+.board-row {
+  display: flex;
+  flex-direction: row; /* Força os filhos a ficarem lado a lado */
+  align-items: center;
+}
