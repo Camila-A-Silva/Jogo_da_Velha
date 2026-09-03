@@ -55,7 +55,7 @@ export default function Game() {
   function handleResetAll() {
     setHistory([Array(9).fill(null)]);
     setCurrentMove(0);
-    setScores({ X:0, O:0, Empate:0});
+    setScores({ x:0, o:0, empate:0});
   }
 
   const moves = history.map((squares, move) => {
@@ -79,11 +79,10 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       
-
         {/*Placar*/}
-      <div className={styles['tplacar']}>
+      <div className={styles.placar}>
         <h2>Placar</h2>
-        <div className={styles['ganhadores']}>
+        <div className={styles.ganhador}>
           <span>X: <strong>{scores.x}</strong></span>
           <br/>
           <span>O: <strong>{scores.o}</strong></span>
@@ -92,10 +91,11 @@ export default function Game() {
         </div>
         <button className={styles['btn-reiniciar']} onClick={handleResetAll}>Reiniciar Jogo</button>
       </div>
+      <div className={styles.historico}>
+          <ol className={styles.ol}>{moves}</ol>
+        </div>
 
-      <div className={styles['historico']}>
-        <ol className={styles.ol}>{moves}</ol>
-      </div>
+      
         
     </div>
     
