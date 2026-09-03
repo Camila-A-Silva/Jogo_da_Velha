@@ -5,12 +5,30 @@
   gap: 8px;
 }
 
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+
 .board__status {
   font-size: 1.25rem;
   font-weight: 600;
   color: #334155;
   margin-bottom: 12px;
 }
+
+.status {
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 /* ESTA CLASSE É A CHAVE: coloca os 3 botões na horizontal */
 .board-row {

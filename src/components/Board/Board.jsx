@@ -48,6 +48,9 @@ export default function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
+      <div className={styles.titulo}>
+        <h1>Jogo da Velha</h1>
+      </div>
       <div className={styles.status}>{status}</div>
       <div className={styles['board-row']}>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} isWinning={winningLine.includes(0)}/>

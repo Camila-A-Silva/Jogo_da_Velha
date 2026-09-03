@@ -17,18 +17,24 @@ export default function Game() {
 
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
+    //apaga o hitórico de jogadas quando aperto no botão voltar
+    if (nextMove === 0) {
+    setHistory([Array(9).fill(null)]);
+  }
   }
 
   const moves = history.map((squares, move) => {
+    let voltar;
     let description;
     if (move > 0) {
       description = 'Ir para a jogada #' + move;
     } else {
-      description = 'Ir para o início do jogo';
+      voltar = 'Iníciar jogo';
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li className={styles.botao} key={move}>
+        <button className={styles.btn} onClick={() => jumpTo(move)}>{voltar}</button>
+        <p>{description}</p>
       </li>
     );
   });
@@ -39,7 +45,7 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className={styles['game-info']}>
-        <ol>{moves}</ol>
+        <ol className={styles.ol}>{moves}</ol>
       </div>
     </div>
   );

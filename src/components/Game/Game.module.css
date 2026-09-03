@@ -36,18 +36,17 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  list-style: none;
 }
 
-.game__info button {
-  padding: 6px 12px;
-  background-color: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  color: #334155;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+.ol{
+  list-style: none;
 }
+
+.botao{
+  padding-left: 50px;
+}
+
 
 .game__info button:hover {
   background-color: #e2e8f0;
