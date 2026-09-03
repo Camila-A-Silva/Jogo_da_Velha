@@ -6,6 +6,7 @@
 }
 
 .titulo{
+  color: var(--titulo);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +18,6 @@
 .board__status {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #334155;
   margin-bottom: 12px;
 }
 
@@ -26,6 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--paragrafo);
 }
 
 

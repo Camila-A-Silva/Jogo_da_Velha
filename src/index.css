@@ -7,8 +7,8 @@
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: var(--fundo);
+
 }
 
 /* Garante que o container principal (#root) ocupe 100% da altura da tela e centralize tudo */
@@ -18,4 +18,18 @@ body {
   align-items: center;     /* Centraliza na vertical */
   justify-content: center;  /* Centraliza na horizontal */
   padding: 16px;
+}
+
+:root{
+  --fundo: #E8F5E9;
+  --titulo: #1B5E20;
+  --paragrafo: #ffffff;
+  --bordas: #2E7D32;  
+  --tabuleiro: #A5D6A7;
+  --botao: #4CAF50;
+
+  /*Cores do tabuleiro quando tem um ganhador*/
+  --fundo-ganhador: #22c55eaf;
+  --borda-ganhador: #15803d;
+  --tranparencia: rgba(34, 197, 94, 0.4);
 }

@@ -14,11 +14,11 @@
   font-size: 2rem;
   line-height: 1; /* IMPEDIMENTO: Trava a altura de linha da fonte '2rem' */
   font-weight: 700;
-  color: #1e293b;
+  color: var(--titulo);
 
   /* Visual da célula */
-  background-color: #ffffff;
-  border: 2px solid #cbd5e1;
+  background-color: var(--tabuleiro);
+  border: 2px solid var(--bordas);
   border-radius: 8px;
   cursor: pointer;
   outline: none;
@@ -26,18 +26,14 @@
 }
 
 .square:hover {
-  background-color: #f1f5f9;
+  background-color: var(--fundo);
 }
 
-.square:focus-visible {
-  outline: 3px solid #3b82f6;
-  outline-offset: 2px;
-}
 
 /* Modificador BEM: Quando o quadrado é campeão */
 .square--winning {
-  background-color: #22c55eaf !important;
-  color: #ffffff !important;
-  border-color: #15803d !important;
-  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);
+  background-color: var(--fundo-ganhador) !important;
+  color: var(--paragrafo) !important;
+  border-color: var(--borda-ganhador) !important;
+  box-shadow: 0 4px 10px var(----tranparencia);
 }
