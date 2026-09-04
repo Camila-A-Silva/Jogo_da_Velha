@@ -18,28 +18,48 @@
   }
 }
 
-.game__board {
+.game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.game__info {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--paragrafo);
-  align-items: center;
-}
 
 .placar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: #2E7D32;
+
+}
+
+.historico{
+  width: 200px;
 }
 
 .ol{
   list-style: none;
 }
 
+.btn-reiniciar{
+  display: flex;
+  justify-content: center;
+}
 
+.btn{
+  width: 150px;
+}
+
+.titulohis{
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Franklin Gothic Medium';
+  font-size: 15px;
+  color: var(--paragrafo);
+}
 
 button{
   background-color: var(--botao);

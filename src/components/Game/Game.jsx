@@ -61,7 +61,7 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Ir para a jogada #' + move;
+      description = move + '° Jogada' ;
     } else {
       description = 'Iníciar jogo';
     }
@@ -75,29 +75,33 @@ export default function Game() {
 
   return (
     <div className={styles.game}>
-      <div className={styles['game-board']}>
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
       
-        {/*Placar*/}
       <div className={styles.placar}>
         <h2>Placar</h2>
         <div className={styles.ganhador}>
-          <span>X: <strong>{scores.x}</strong></span>
-          <br/>
-          <span>O: <strong>{scores.o}</strong></span>
-          <br/>
-          <span>Empates: <strong>{scores.empate}</strong></span>
+          <span>X: <strong>{scores.x}</strong>   </span>
+          <span>O: <strong>{scores.o}</strong>   </span>
+          <span>Empates: <strong>{scores.empate}</strong>   </span>
         </div>
-        <button className={styles['btn-reiniciar']} onClick={handleResetAll}>Reiniciar Jogo</button>
       </div>
-      <div className={styles.historico}>
-          <ol className={styles.ol}>{moves}</ol>
-        </div>
 
-      
-        
+    <div className={styles['game_info']}>
+      <div className={styles['game-board']}>
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>      
+
+      <div >
+
+      </div>
+      <button className={styles['btn-reiniciar']} onClick={handleResetAll}>Reiniciar Jogo</button>
+
     </div>
+      <div className={styles.historico}>
+        <h1 className={styles.titulohis}>Histórico de Jogadas</h1>
+        <ol className={styles.ol}>{moves}</ol>
+      </div>
     
+    </div>
+ 
   );
 }
